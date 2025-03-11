@@ -1,3 +1,5 @@
-# Media Verifier utilizing Phantom Wallet
+# Media Verifier
+Currently only operating on Solana Testnet and utilizing Phantom Wallet.
 
-Currently only operating on Solana Testnet.
+# Demo
+Hosted at https://media-verifier.onrender.com
