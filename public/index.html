@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Authenticator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Media Authenticator</h1>
+      <p class="subtitle">Secure media verification powered by Solana</p>
+    </header>
+
+    <main class="main-content">
+      <section class="upload-section">
+        <h2 class="section-header">Upload Media for Authentication</h2>
+        <div class="file-input-group">
+          <input type="file" id="mediaInput" accept="image/*,video/*" class="file-input">
+          <button id="uploadBtn" class="btn primary">
+            <span class="btn-content">Upload & Sign</span>
+            <div class="loading-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="verify-section">
+        <h2 class="section-header">Verify Media Authenticity</h2>
+        <div class="file-input-group">
+          <input type="file" id="verifyMediaInput" accept="image/*,video/*" class="file-input">
+          <button id="verifyBtn" class="btn secondary">
+            <span class="btn-content">Verify Media</span>
+            <div class="loading-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+    <p class="copyright-tag">© 2025, Proton Consulting</p>
+
+    <div id="notifications" class="notifications"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
