@@ -57,7 +57,7 @@ document.getElementById('uploadBtn').addEventListener('click', async () => {
 
   // Check if the media has already been signed using the verify endpoint
   try {
-    const verifyResponse = await fetch('https://media-verifier.onrender.com/verify', {
+    const verifyResponse = await fetch('/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ fileHash })
@@ -95,7 +95,7 @@ document.getElementById('uploadBtn').addEventListener('click', async () => {
       console.log('Signature:', signatureHex);
 
       // Send fileHash, signature, and user public key to the backend
-      const responseData = await fetch('https://media-verifier.onrender.com/upload', {
+      const responseData = await fetch('/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -132,7 +132,7 @@ document.getElementById('verifyBtn').addEventListener('click', async () => {
   console.log('Computed file hash for verification:', fileHash);
   
   try {
-    const response = await fetch('http://localhost:3000/verify', {
+    const response = await fetch('/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ fileHash })
